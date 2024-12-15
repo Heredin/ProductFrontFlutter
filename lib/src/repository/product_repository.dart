@@ -45,12 +45,10 @@ class ProductRepository implements Repository {
   Future<String> updateProduct(Product product) async {
     var url = Uri.parse('$dataURL/products/${product.id}');
     String resData = '';
-    print(product.id);
     await http.put(url,
         body: product.toJson(),
         headers: {'Accept': 'application/json'}).then((response) {
       Map<String, dynamic> result = json.decode(response.body);
-      print(result);
       return resData = result['name'];
     });
     return resData;

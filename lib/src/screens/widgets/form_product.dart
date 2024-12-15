@@ -24,7 +24,6 @@ class _ModalFormState extends State<ModalForm> {
   _submitForm() {
     if (_formKey.currentState!.validate()) {
       if (widget.product?.id != null) {
-        print('actualizando');
         _formKey.currentState!.save();
         Product product = Product(
             id: widget.product?.id,

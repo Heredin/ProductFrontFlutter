@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:productos_flutter/src/controller/product_controller.dart';
 import 'package:productos_flutter/src/models/product.dart';
 import 'package:productos_flutter/src/repository/product_repository.dart';
-import 'package:productos_flutter/src/screens/form_product.dart';
+import 'package:productos_flutter/src/screens/widgets/form_product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -85,6 +85,7 @@ class _HomeViewState extends State<HomeScreen> {
                                   content: Text(value),
                                 ));
                               });
+                              setState(() {});
                             },
                             child: buildCallContainer(Icons.delete,
                                 const Color.fromARGB(255, 218, 87, 87)))
